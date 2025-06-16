@@ -120,7 +120,7 @@
 
 > ## 六、附录
 
-- 模型权重 / 渲染结果（百度云）：[链接](https://pan.baidu.com)
+- colmap得到的点云矩阵储存在transforms_train.json和transforms_test.json中
 - 配置文件(your_own_data.txt)节选：
 
 ```ini
@@ -134,3 +134,5 @@ N_voxel_final = 27000000
 lr_init = 0.02
 ...
 ```
+- 模型权重 / 渲染结果（百度云）：[链接](https://pan.baidu.com)
+
