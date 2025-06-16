@@ -4,7 +4,7 @@ datadir = /cpfs01/projects-HDD/cfff-aad9fa3a0781_HDD/hz_24210980090/sjwl/final_d
 expname =  chahe
 basedir = /cpfs01/projects-HDD/cfff-aad9fa3a0781_HDD/hz_24210980090/TensoRF/log
 
-n_iters = 60000
+n_iters = 30000
 batch_size = 2048
 
 N_voxel_init = 2097156 # 128**3
