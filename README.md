@@ -44,26 +44,11 @@
 - CUDA 版本：12.1
 - PyTorch 版本：2.5.1
 
-### 可视化结果：
-![Train_MSE](https://github.com/irislovebest/TensoRF_qm/blob/main/train_mse.png.png)
-![Train_PNSR](https://github.com/irislovebest/TensoRF_qm/blob/main/psnr_curve_centered.png)
-![Train_REG_TV_APP](https://github.com/irislovebest/TensoRF_qm/blob/main/train_reg_tv_app.png)
-![Train_REG_TV_DENSITY](https://github.com/irislovebest/TensoRF_qm/blob/main/train_reg_tv_density.png)
-
 ## 四、结果展示与评估分析
 
 ### 渲染图像示例（测试视角）
 
 ![渲染示例](https://github.com/irislovebest/TensoRF_qm/blob/main/000.png)
-
-### 定量指标对比
-
-| 模型              | PSNR ↑ | SSIM ↑ | LPIPS (Alex) ↓ | LPIPS (VGG) ↓ |
-| ----------------- | ------ | ------ | -------------- | ------------- |
-| 原版 NeRF（可选） | --     | --     | --             | --            |
-| **TensoRF**       | xx.xx  | 0.xxx  | 0.xxx          | 0.xxx         |
-
-> _评价指标由 `compute_metrics.py` 得出_
 
 ---
 
@@ -82,22 +67,7 @@
 
 ---
 
-## 六、附录
 
-- 模型权重 / 渲染结果（百度云）：[链接](https://pan.baidu.com)
-- 配置文件节选：
-
-```ini
-# your_own_data.txt
-dataset_name = own_data
-datadir = ../own_data
-n_iters = 30000
-batch_size = 2048
-model_name = TensorVMSplit
-N_voxel_final = 27000000
-lr_init = 0.02
-...
-```
 
 ## 训练指标曲线分析（TensoRF）
 
@@ -108,7 +78,7 @@ lr_init = 0.02
 - 衡量模型渲染图像与真实图像的相似度，值越高代表质量越好。
 - PSNR 从初始的 5 快速提升至 27，整体趋势持续上升，表明模型训练收敛良好，渲染质量稳定提升。
 
-![PSNR 曲线](train_psnr.png)
+![PSNR 曲线](psnr_curve_centered.png)
 
 ---
 
@@ -148,4 +118,19 @@ lr_init = 0.02
 | **reg_tv_app**     | 外观编码平滑性正则项（↘） | 初震荡 → 后平稳           | 降低纹理过拟合或噪声 |
 | **reg_tv_density** | 密度场连续性约束（↘）     | 类似 reg_tv_app，稳定收敛 | 辅助模型几何边界连贯 |
 
-> 所有图像已保存在报告目录下，可插入至 PDF 或 Word 报告正文。
+> ## 六、附录
+
+- 模型权重 / 渲染结果（百度云）：[链接](https://pan.baidu.com)
+- 配置文件(your_own_data.txt)节选：
+
+```ini
+# your_own_data.txt
+dataset_name = own_data
+datadir = ../own_data
+n_iters = 30000
+batch_size = 2048
+model_name = TensorVMSplit
+N_voxel_final = 27000000
+lr_init = 0.02
+...
+```
