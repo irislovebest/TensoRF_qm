@@ -45,10 +45,10 @@
 - PyTorch 版本：2.5.1
 
 ### 可视化结果：
-
-> _插入 loss 曲线 / PSNR 曲线（TensorBoard 截图）_
-
----
+![Train_MSE](https://github.com/irislovebest/TensoRF_qm/blob/main/train_mse.png.png)
+![Train_PNSR](https://github.com/irislovebest/TensoRF_qm/blob/main/psnr_curve_centered.png)
+![Train_REG_TV_APP](https://github.com/irislovebest/TensoRF_qm/blob/main/train_reg_tv_app.png)
+![Train_REG_TV_DENSITY](https://github.com/irislovebest/TensoRF_qm/blob/main/train_reg_tv_density.png)
 
 ## 四、结果展示与评估分析
 
