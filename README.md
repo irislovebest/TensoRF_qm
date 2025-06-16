@@ -54,7 +54,7 @@
 
 ### 渲染图像示例（测试视角）
 
-![图片描述](images/your-image.jpg)
+![渲染示例](https://github.com/irislovebest/TensoRF_qm/blob/main/000.png)
 
 ### 定量指标对比
 
